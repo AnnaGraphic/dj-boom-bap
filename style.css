@@ -22,25 +22,24 @@ body {
 }
 
 /* ------------- NAV BAR ------------ */
+header {
+    width: 100vw;
+}
 nav {
     display: flex;
     align-items: center;
     width: 100vw;
-    height: 15%;
+    height: 5rem;
     background-color: var(--pink);
-}
-nav container {
     display: flex;
     justify-content: space-around;
-    width: 100vh;
     flex-direction: row;
 }
-nav container div {
-   flex-direction: row;
+nav div {
+    display: flex;
+    flex-direction: row;
 }
-nav ul {
-    list-style: none;
-}
+
 nav a {
     text-decoration: none;
     color: var(--white);
@@ -59,6 +58,26 @@ a.logo img {
 #news::before {
     content: url(./images/music-solid.svg);
     color: var(--blue);
+    width: 15px;
+    height: 15px;
+}
+#music::before {
+    content: url(./images/music-solid.svg);
+    color: var(--blue);
+    width: 15px;
+    height: 15px;
+}
+#merch::before {
+    content: url(./images/music-solid.svg);
+    color: var(--blue);
+    width: 15px;
+    height: 15px;
+}
+#contact::before {
+    content: url(./images/music-solid.svg);
+    color: var(--blue);
+    width: 15px;
+    height: 15px;
 }
 
 main {
