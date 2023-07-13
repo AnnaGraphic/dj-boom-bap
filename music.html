@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>DJ BOOM BAP - music</title>
+    <script>
+        function playMusic(){
+        var music = new Audio('music/back-to-oldschool-12053.mp3');
+        music.play();
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -18,10 +24,18 @@
         </nav>
     </header>
     <main>
-
+        <section class="music">
+            <h2>small collection of my sets:</h2>
+            <p>back to oldschool</p><p class="time">04:33</p>
+            <button class="music"  onclick="playMusic()">play</button>
+            <p>open decks on 2023-07-09</p><p class="time">24:33</p>
+            <button class="music"  onclick="playMusic()">play</button>
+            <p>live on carnival</p><p class="time">42:23</p>
+            <button class="music"  onclick="playMusic()">play</button>
+        </section>
     </main>
     <footer>
-
+        <p> Impressum, Datenschutz, Copyright.</p>
     </footer>
 </body>
 </html>

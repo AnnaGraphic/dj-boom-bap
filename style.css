@@ -1,8 +1,10 @@
+/* ------------- GENERAL ------------ */
 :root {
     --pink: #EA047E;
     --orange: #FF6D28;
     --yellow: #FCE700;
-    --blue: #00F5FF;
+    --blue: #01aaff;
+    --light-blue: #00F5FF;
     --white: #fdfbf9;
     --shadow: #000000;
 }
@@ -20,6 +22,18 @@ body {
     background-color: var(--yellow);
     justify-content: space-between;
 }
+button {
+    border: none;
+    /* box-shadow:  0em 0em 0.5em var(--shadow); */
+    border-radius: 2em;
+    color: var(--yellow);
+    background-color: var(--blue);
+    padding: 1em;
+    font-weight: bolder;
+}
+h2 {
+    color: var(--pink)
+}
 
 /* ------------- NAV BAR ------------ */
 header {
@@ -27,19 +41,18 @@ header {
 }
 nav {
     display: flex;
+    justify-content: space-around;
+    flex-direction: row;
     align-items: center;
     width: 100vw;
     height: 5rem;
     background-color: var(--pink);
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
+
 }
 nav div {
     display: flex;
     flex-direction: row;
 }
-
 nav a {
     text-decoration: none;
     color: var(--white);
@@ -57,40 +70,65 @@ a.logo img {
 }
 #news::before {
     content: url(./images/music-solid.svg);
-    color: var(--blue);
-    width: 15px;
-    height: 15px;
+    width: 1.3em;
+    height: 1.3em;
+    padding-right: 0.3em;
 }
 #music::before {
     content: url(./images/music-solid.svg);
-    color: var(--blue);
-    width: 15px;
-    height: 15px;
+    width: 1.3em;
+    height: 1.3em;
+    padding-right: 0.3em;
 }
 #merch::before {
     content: url(./images/music-solid.svg);
-    color: var(--blue);
-    width: 15px;
-    height: 15px;
+    width: 1.3em;
+    height: 1.3em;
+    padding-right: 0.3em;
 }
 #contact::before {
     content: url(./images/music-solid.svg);
-    color: var(--blue);
-    width: 15px;
-    height: 15px;
+    width: 1.3em;
+    height: 1.3em;
+    padding-right: 0.3em;
 }
-
+/* ------------- MAIN ------------ */
 main {
     display: flex;
     flex-direction: row;
-    max-height: 100px;
-    width: 100px;
-    background-color: var(--blue);
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    /* background-color: var(--blue); */
 }
+form#newsletter {
+    display: flex;
+    color: var(--blue);
+    padding: 1rem;
+}
+input[type=email] {
+    height: 2.5em;
+    border: none;
+    border-radius: 5em;
+    border-bottom: 0.em solid var(--pink);
+    padding: 1em;
+    color: var(--pink);
+  }
+/* ------------- FOOTER ------------ */
 footer {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100vw;
     height: 3rem;
     background-color: var(--orange);
+}
+footer a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: bold;
+}
+footer a:hover {
+    color: var(--blue);
+    text-shadow: 0.3em 0.3em 0em var(--shadow) (0,0,0,0.6);
 }
