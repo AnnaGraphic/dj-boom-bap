@@ -1,0 +1,41 @@
+:root {
+    --pink: #EA047E;
+    --orange: #FF6D28;
+    --yellow: #FCE700;
+    --blue: #00F5FF;
+}
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--yellow);
+    justify-content: space-between;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 3rem;
+    background-color: var(--pink);
+}
+main {
+    display: flex;
+    flex-direction: row;
+    max-height: 100px;
+    width: 100px;
+    background-color: var(--blue);
+}
+footer {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 3rem;
+    background-color: var(--orange);
+}
