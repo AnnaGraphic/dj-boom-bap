@@ -18,13 +18,39 @@
         </nav>
     </header>
     <main>
+        <form id="contact-form" action="" >
+            <h2 class="hidden">Contact</h2>
+            <img class="headline" src="./images/Contact 1.svg" alt="contact form">
+            <fieldset>
+            <label for="fullname">name:
+                <br>
+                <input type="text" id="fullname" placeholder="enter your name ..." size="25">
+            </label>
+            <br>
+            <label for="contact-email">eMail:
+                <br>
+                <input type="email" id="contact-email" placeholder="enter your email ..." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" size="25" required>
+                <br>
+            </label>
+            <label for="message">your message:
+                <br>
+                <input type="textarea" id="message" placeholder="enter your message ..." size="25" rows="4" cols="50" required>
+            </label>
+        </fieldset>
+            <!-- name, email address, and message.  -->
+        </form>
+        <br>
         <form id="newsletter">
               <!-- <legend>Newsletter</legend> -->
-              <p>
-                <label for="email">abo my <b>newsletter</b>:</label>
-                <input type="email" id="email" placeholder="enter your email ..."
-                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" size="20" required>
-              </p>
+              <h2 class="hidden">Newsletter</h2>
+              <img class="headline" src="./images/Newsletter 1.svg" alt="newsletter">
+              <fieldset>
+                <label for="email">sign up for the <b>newsletter</b>:
+                    <br>
+                    <input type="email" id="email" placeholder="enter your email ..."
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" size="20" required>
+                </label>
+              </fieldset>
         </form>  
     </main>
     <footer>
