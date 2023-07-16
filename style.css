@@ -38,6 +38,12 @@ button:hover {
 h2 {
     color: var(--pink)
 }
+hr {
+    width: 50%;
+    border: solid 0.02rem;
+    color: var(--pink);
+    box-shadow: 0 3px 10px var(--pink);
+}
 .hidden {
     visibility: hidden;
 }
@@ -77,6 +83,11 @@ a.logo img {
     left: 1rem;
     filter: drop-shadow(5px 5px 8px var(--yellow));
 }
+a.header-graphics img {
+    width: 8rem;
+    filter: drop-shadow(3px 3px 2px var(--pink));
+}
+
 #news::before {
     content: url(./images/Dates\ 2.svg);
     width: 8em;
@@ -111,9 +122,15 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 100vw;
-    height: 100vh;
+
 }
+main p {
+    color: var(--yellow);
+}
+
+/* -------- contact.html --------- */
 form#contact-form {
     display: flex;
     color: var(--yellow);
@@ -160,6 +177,11 @@ input {
     margin: 0.5em;
     color: var(--pink);
   }
+/* ------------ music.html ----------- */
+audio[controls] {
+background-color: var(--pink);
+border-radius: 3em;
+}
 .headline {
     width: 10em;
     filter: drop-shadow(3px 3px 2px var(--pink));
