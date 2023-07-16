@@ -24,25 +24,28 @@
             <fieldset>
             <label for="fullname">name:
                 <br>
-                <input type="text" id="fullname" placeholder="enter your name ..." size="25">
+                    <input type="text" id="fullname" placeholder="enter your name ..." size="30">
             </label>
             <br>
             <label for="contact-email">eMail:
                 <br>
-                <input type="email" id="contact-email" placeholder="enter your email ..." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" size="25" required>
-                <br>
+                    <input type="email" id="contact-email" placeholder="enter your email ..." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" size="30" required>
             </label>
+                <br>
             <label for="message">your message:
                 <br>
-                <input type="textarea" id="message" placeholder="enter your message ..." size="25" rows="4" cols="50" required>
+                    <textarea id="message" placeholder="enter your message ..." rows="6" cols="40" required>
+                    </textarea>
+                    <br>
+                    <button type="submit">send</button>
             </label>
         </fieldset>
             <!-- name, email address, and message.  -->
         </form>
-        <br>
-        <form id="newsletter">
+        <hr>
+        <form id="newsletter" action="">
               <!-- <legend>Newsletter</legend> -->
-              <h2 class="hidden">Newsletter</h2>
+              <!-- <h2 class="hidden">Newsletter</h2> -->
               <img class="headline" src="./images/Newsletter 1.svg" alt="newsletter">
               <fieldset>
                 <label for="email">sign up for the <b>newsletter</b>:
