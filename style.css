@@ -190,6 +190,9 @@ audio[controls] {
 background-color: var(--pink);
 border-radius: 3em;
 }
+th {
+    color: var(--yellow);
+}
 .headline {
     width: 10em;
     filter: drop-shadow(3px 3px 2px var(--pink));
