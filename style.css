@@ -35,6 +35,10 @@ button:hover {
     color: var(--white);
     background-color: #00F5FF;
 }
+h1 {
+    color: var(--white);    
+    text-shadow: 0 3px 10px var(--pink);
+}
 h2 {
     color: var(--pink)
 }
@@ -43,6 +47,14 @@ hr {
     border: solid 0.02rem;
     color: var(--pink);
     box-shadow: 0 3px 10px var(--pink);
+}
+a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: normal;
+}
+a:hover {
+    color: var(--yellow);   
 }
 .hidden {
     visibility: hidden;
@@ -61,7 +73,6 @@ nav {
     width: 100vw;
     height: 4.5rem;
     background-color: var(--orange);
-
 }
 nav div {
     display: flex;
@@ -71,23 +82,28 @@ nav a {
     text-decoration: none;
     color: var(--white);
     font-weight: bold;
+    min-height: 4rem;
+    /* padding: 0.5rem; */
 }
-nav a:hover {
+/* nav a:hover {
     color: var(--orange);
     text-shadow: 0.3em 0.3em 0em var(--shadow) (0,0,0,0.6);
-}
-a.logo img {
+} */
+nav a.logo {
+    background: url(./images/logo.png) no-repeat;
+    background-size: cover;
     width: 14rem;
-    position: relative;
-    top: 5rem;
-    left: 1rem;
+    height: auto;
+    padding: 0.5rem;
     filter: drop-shadow(5px 5px 8px var(--yellow));
 }
 a.header-graphics img {
+    /* background: url(./images/xxx) no-repeat; */
+    background-size: contain;
     width: 8rem;
     filter: drop-shadow(3px 3px 2px var(--pink));
 }
-
+/* 
 #news::before {
     content: url(./images/Dates\ 2.svg);
     width: 8em;
@@ -102,7 +118,7 @@ a.header-graphics img {
     padding-top: 3.5em;
     filter: drop-shadow(3px 3px 2px var(--pink));
 }
-#merch::before { /* shop */
+#merch::before { 
     content: url(./images/Shop\ 1.svg);
     width: 8em;
     height: 8em;
@@ -115,7 +131,8 @@ a.header-graphics img {
     height: 8em;
     padding-top: 3.5em;
     filter: drop-shadow(3px 3px 2px var(--pink));
-}
+} 
+*/
 
 /* ------------- MAIN ------------ */
 main {
@@ -124,7 +141,6 @@ main {
     justify-content: center;
     align-items: center;
     width: 100vw;
-
 }
 main p {
     color: var(--yellow);
@@ -165,17 +181,17 @@ input {
     max-width: 75ch;
 }
 textarea {
-resize: vertical;
-color: var(--pink);
-font-size: 16px;
-font-size: max(16px, 1em);
-font-family: inherit;
-border: none;
-border-radius: 1em;
-border-bottom: 0.em solid var(--pink);
-padding: 1em;
-margin: 0.5em;
-color: var(--pink);
+    resize: vertical;
+    color: var(--pink);
+    font-size: 16px;
+    font-size: max(16px, 1em);
+    font-family: inherit;
+    border: none;
+    border-radius: 1em;
+    border-bottom: 0.em solid var(--pink);
+    padding: 1em;
+    margin: 0.5em;
+    color: var(--pink);
 }
 /* ----------- dates / news ----------- */
 #dates {
@@ -187,8 +203,8 @@ color: var(--pink);
 
 /* ------------ music.html ----------- */
 audio[controls] {
-background-color: var(--pink);
-border-radius: 3em;
+    background-color: var(--pink);
+    border-radius: 3em;
 }
 th {
     color: var(--yellow);
@@ -196,17 +212,7 @@ th {
 .headline {
     width: 10em;
     filter: drop-shadow(3px 3px 2px var(--pink));
-    
 }
-/* size not working properly */
-/* #contact::before {
-    content: url(./images/Contact\ 1.svg);
-    width: 8rem;
-    height: 8rem;
-    padding-top: 3.5em;
-    filter: drop-shadow(3px 3px 2px var(--pink));
-} */
-
 
 /* ------------- FOOTER ------------ */
 footer {
@@ -225,4 +231,19 @@ footer a {
 footer a:hover {
     color: var(--yellow);
     text-shadow: 0.3em 0.3em 0em var(--shadow) (0,0,0,0.6);
+}
+/* ------------- MEDIA QUERIES ------------ */
+@media only screen and (max-width: 916px) and (orientation:portrait) {
+ 
+    /* ------------- NAV BAR ------------ */
+    a.logo img {
+        max-width: 7rem;
+        flex-shrink: 1;
+        filter: drop-shadow(5px 5px 8px var(--yellow));
+    }
+    a.header-graphics img {
+        max-width: 7rem;
+        flex-shrink: 1;
+        filter: drop-shadow(3px 3px 2px var(--pink));
+    }
 }
