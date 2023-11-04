@@ -1,39 +1,41 @@
 document.addEventListener("DOMContentLoaded", function () {
+  let upcomingTable = document.getElementById("upcoming").getElementsByTagName("tbody")[0];
+  let pastTable = document.getElementById("past").getElementsByTagName("tbody")[0];
+  let upcomingHeader = document.querySelector('h2');
+
   function displayEventsInTables(events) {
-    var currentDate = new Date();
-    var upcomingTable = document.getElementById("upcoming").getElementsByTagName("tbody")[0];
-    var pastTable = document.getElementById("past").getElementsByTagName("tbody")[0];
-    var upcomingHeader = document.querySelector('h2');
-  
-    var upcomingEventsExist = false;
-  
-    for (var i = 0; i < events.length; i++) {
-      var event = events[i];
-      var eventDate = new Date(event.date + ' ' + event.time);
-  
-      var row;
+    const currentDate = new Date();
+    let upcomingEventsExist = false;
+
+    for (const event of events) {
+      const eventDate = new Date(event.date + ' ');
+
+      const row = document.createElement('tr');
+      const dateCell = document.createElement('td');
+      const locationCell = document.createElement('td');
+
+      dateCell.innerHTML = event.date;
+      locationCell.innerHTML = event.location;
+
       if (eventDate < currentDate) {
-        row = pastTable.insertRow(pastTable.rows.length);
+        pastTable.appendChild(row);
       } else {
         upcomingEventsExist = true;
-        row = upcomingTable.insertRow(upcomingTable.rows.length);
+        upcomingTable.appendChild(row);
       }
-  
-      var dateCell = row.insertCell(0);
-      var timeCell = row.insertCell(1);
-      var locationCell = row.insertCell(2);
-  
-      dateCell.innerHTML = event.date;
-      timeCell.innerHTML = event.time;
-      locationCell.innerHTML = event.location;
+
+      row.appendChild(dateCell);
+      row.appendChild(locationCell);
     }
-  
+
     if (!upcomingEventsExist) {
-      upcomingHeader.innerHTML = "Coming Soon";
+      const comingSoon = upcomingHeader.appendChild(document.createElement('p'));
+      comingSoon.innerText = "tba ...";
+      comingSoon.style.textAlign = "center";
       document.getElementById("upcoming").style.display = "none";
     }
   }
-  
+
   fetch('gigs.json')
     .then(function(response) {
       return response.json();
@@ -45,4 +47,3 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error('error when loading JSON: ' + error);
     });
 });
-  
