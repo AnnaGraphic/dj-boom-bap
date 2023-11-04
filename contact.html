@@ -22,8 +22,30 @@
     </header>
     <main>
         <h1>Contact</h1>
-        <a href="mailto:djboombap@djbommbap.com">Send an email!</a></p>
-        
+
+        <form id="contact-form" action="http://localhost:8080" method="post" >
+            <h2 class="hidden">Contact</h2>
+            <fieldset>
+                <label for="fullname">name:
+                    <br>
+                    <input type="text" name="fullname" id="fullname" placeholder="enter your name ..." size="30">
+                </label>
+                <br>
+                <label for="contact-email">eMail:
+                    <br>
+                    <input type="email" name="contact-email" id="contact-email" placeholder="enter valid email ..." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" size="30" required>
+                </label>
+                <br>
+                <label for="message">your message:
+                    <br>
+                    <textarea id="message" name="message" rows="6" cols="40" required>
+                    </textarea>
+                    <br>
+                    <button type="submit">send</button>
+                </label>
+            </fieldset>
+        </form>
+
     </main>
     <footer>
         <p> <a href="./contact.html#newsletter">Newsletter </a> <a href="./impressum.html">Impressum </a> <a href="./datenschutz.html">Datenschutz </a> </p>
