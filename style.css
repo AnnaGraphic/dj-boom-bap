@@ -5,6 +5,7 @@
     --yellow: #FCE700;
     --blue: #01AAFF;
     --light-blue: #00F5FF;
+    --background: #09000e;
     --white: #fdfbf9;
     --shadow: #000000;
 }
@@ -19,8 +20,9 @@ body {
     flex-direction: column;
     width: 100vw;
     height: 100vh;
-    background-color: var(--orange);
+    background-color: var(--background);
     justify-content: space-between;
+    color: var(--white);
 }
 button {
     border: none;
@@ -36,11 +38,15 @@ button:hover {
     background-color: #00F5FF;
 }
 h1 {
-    color: var(--white);    
-    text-shadow: 0 3px 10px var(--pink);
+    color: var(--white);
+    margin: 0.6em 0 0.6em 0;
 }
 h2 {
-    color: var(--pink)
+    color: var(--pink);
+    margin: 0.6em 0;
+}
+h3 {
+    margin: 0.6em 0 1em 0;
 }
 hr {
     width: 50%;
@@ -54,7 +60,7 @@ a {
     font-weight: normal;
 }
 a:hover {
-    color: var(--yellow);   
+    color: var(--yellow);
 }
 .hidden {
     visibility: hidden;
@@ -63,7 +69,6 @@ a:hover {
 /* ------------- NAV BAR ------------ */
 header {
     width: 100vw;
-    box-shadow: 0 3px 10px var(--pink);
 }
 nav {
     display: flex;
@@ -72,67 +77,29 @@ nav {
     align-items: center;
     width: 100vw;
     height: 4.5rem;
-    background-color: var(--orange);
-}
-nav div {
-    display: flex;
-    flex-direction: row;
+    background-color: var(--background);
 }
 nav a {
     text-decoration: none;
-    color: var(--white);
+    color: var(--blue);
     font-weight: bold;
     min-height: 4rem;
-    /* padding: 0.5rem; */
 }
-/* nav a:hover {
-    color: var(--orange);
-    text-shadow: 0.3em 0.3em 0em var(--shadow) (0,0,0,0.6);
-} */
 nav a.logo {
-    background: url(./images/logo.png) no-repeat;
-    background-size: cover;
+    float: left;
+    margin-bottom: -10%;
+    padding: 0.5rem;
+    /*filter: drop-shadow(2px 0px 10px var(--yellow));*/
+}
+nav a.logo img {
     width: 14rem;
     height: auto;
-    padding: 0.5rem;
-    filter: drop-shadow(5px 5px 8px var(--yellow));
 }
 a.header-graphics img {
-    /* background: url(./images/xxx) no-repeat; */
     background-size: contain;
     width: 8rem;
-    filter: drop-shadow(3px 3px 2px var(--pink));
+    filter: drop-shadow(3px 3px 10px var(--pink));
 }
-/* 
-#news::before {
-    content: url(./images/Dates\ 2.svg);
-    width: 8em;
-    height: 8em;
-    padding-top: 3.5em;
-    filter: drop-shadow(3px 3px 2px var(--pink));
-}
-#music::before {
-    content: url(./images/Music\ 1.svg);
-    width: 8em;
-    height: 8em;
-    padding-top: 3.5em;
-    filter: drop-shadow(3px 3px 2px var(--pink));
-}
-#merch::before { 
-    content: url(./images/Shop\ 1.svg);
-    width: 8em;
-    height: 8em;
-    padding-top: 3.5em;
-    filter: drop-shadow(3px 3px 2px var(--pink));
-}
-#contact::before {
-    content: url(./images/Contact\ 1.svg);
-    width: 8em;
-    height: 8em;
-    padding-top: 3.5em;
-    filter: drop-shadow(3px 3px 2px var(--pink));
-} 
-*/
 
 /* ------------- MAIN ------------ */
 main {
@@ -166,7 +133,6 @@ fieldset {
     flex-direction: column;
     border: none;
 }
-/* input[type=email]  */
 input {
     font-size: 16px;
     font-size: max(16px, 1em);
@@ -193,7 +159,12 @@ textarea {
     margin: 0.5em;
     color: var(--pink);
 }
+
 /* ----------- dates / news ----------- */
+table {
+    font-size: large;
+    border-spacing: 1em 0.1em;
+}
 #dates {
     color: var(--yellow);
 }
@@ -213,6 +184,10 @@ th {
     width: 10em;
     filter: drop-shadow(3px 3px 2px var(--pink));
 }
+/* ------------ datenschutz.html ----------- */
+section.datenschutz {
+    max-width: 75ch;
+}
 
 /* ------------- FOOTER ------------ */
 footer {
@@ -221,12 +196,13 @@ footer {
     align-items: center;
     width: 100vw;
     height: 4rem;
-    background-color: var(--orange);
+    background-color: var(--background);
 }
 footer a {
     text-decoration: none;
     color: var(--white);
     font-weight: bold;
+    margin: 0 0.8em;
 }
 footer a:hover {
     color: var(--yellow);
@@ -234,7 +210,7 @@ footer a:hover {
 }
 /* ------------- MEDIA QUERIES ------------ */
 @media only screen and (max-width: 916px) and (orientation:portrait) {
- 
+
     /* ------------- NAV BAR ------------ */
     a.logo img {
         max-width: 7rem;
