@@ -6,3 +6,4 @@
     - style button
     - hover effects on nav bar items
     - sanitize input fields
+    - css: add mobile view

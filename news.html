@@ -15,36 +15,43 @@
 <body>
     <header>
         <nav>
-            <a href="index.html" class="logo"><img src="./images/IMG_0161.png" alt=""></a>
+            <a href="index.html" class="logo"><img src="./images/logo.png" alt="DJ Boom-Baps logo"></a>
+            <a href="index.html" class="header-graphics"><img src="./images/Start 1.svg" alt="start"></a>
             <a href="news.html" class="header-graphics"><img src="./images/Dates 2.svg" alt="dates"></a>
             <a href="music.html" class="header-graphics"><img src="./images/Music 1.svg" alt="music"></a>
-            <a href="shop.html" class="header-graphics"><img src="./images/Shop 1.svg" alt="shop"></a>
             <a href="contact.html" class="header-graphics"><img src="./images/Contact 1.svg" alt="contact"></a>
         </nav>
     </header>
     <main>
-    <table id="dates">
-        <h2>Next Gigs:</h2>
-    <thead>
-        <tr>
-           <th>🗓️ date 🎠</th>
-           <th> 🕐time 🕡</th>
-           <th> 🎡venue 🏝️</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>2023-07-16</td>
-            <td>20:00-22:00</td>
-            <td>Splash</td>
-        </tr>
-    </tbody>
+        <h2>Upcoming Gigs</h2>
+        <table id="upcoming" class="event-table">
+            <thead>
+                <tr>
+                    <th>🗓️ date 🎠</th>
+                    <th> 🎡venue 🏝️</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- upcoming gigs -->
+            </tbody>
+        </table>
+        <h2>Past Gigs</h2>
+        <table id="past" class="event-table">
+            <thead>
+                <tr>
+                    <th>🗓️ date 🎠</th>
+                    <th> 🎡venue 🏝️</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- past gigs -->
+            </tbody>
+        </table>
 
-
-</table>
     </main>
     <footer>
-        <p> <a href="./contact.html#newsletter">Newsletter </a> <a href="">Impressum </a> <a href="">Datenschutz </a> <a href="">Copyright</a></p>
+        <p> <a href="./contact.html#newsletter">Newsletter </a> <a href="./impressum.html">Impressum </a> <a href="./datenschutz.html">Datenschutz </a></p>
     </footer>
+    <script src="main.js"></script>
 </body>
 </html>

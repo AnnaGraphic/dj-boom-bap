@@ -4,7 +4,7 @@
   "description": "website of famous DJ Boom Bap",
   "main": "index.js",
   "scripts": {
-    "deploy": "gh-pages -b gh-pages -d ."
+    "deploy": "gh-pages -b gh-pages -d .",
   },
   "keywords": [],
   "author": "",
